@@ -2,9 +2,9 @@
   "name": "echo-js",
   "version": "1.7.3",
   "description": "Lazy-loading with data-* attributes, offset and throttle options",
-  "author": "@toddmotto",
+  "author": "@1998763",
   "license": "MIT",
-  "homepage": "https://github.com/toddmotto/echo",
+  "homepage": "https://github.com/1998763/echo",
   "devDependencies": {
     "gulp": "~3.7.0",
     "gulp-uglify": "~0.3.0",

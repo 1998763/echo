@@ -1,4 +1,4 @@
-/*! echo.js v1.7.0 | (c) 2015 @toddmotto | https://github.com/toddmotto/echo */
+/*! echo-js v1.7.3 | (c) 2015 @1998763 | https://github.com/1998763/echo */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(function() {
@@ -22,7 +22,7 @@
   var isHidden = function (element) {
     return (element.offsetParent === null);
   };
-  
+
   var inView = function (element, view) {
     if (isHidden(element)) {
       return false;
@@ -63,10 +63,10 @@
     callback = opts.callback || callback;
     echo.render();
     if (document.addEventListener) {
-      root.addEventListener('scroll', debounceOrThrottle, false);
+      document.querySelector(opts.element).addEventListener('scroll', debounceOrThrottle, false);
       root.addEventListener('load', debounceOrThrottle, false);
     } else {
-      root.attachEvent('onscroll', debounceOrThrottle);
+      document.querySelector(opts.element).attachEvent('onscroll', debounceOrThrottle);
       root.attachEvent('onload', debounceOrThrottle);
     }
   };

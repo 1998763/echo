@@ -21,7 +21,7 @@
   var isHidden = function (element) {
     return (element.offsetParent === null);
   };
-  
+
   var inView = function (element, view) {
     if (isHidden(element)) {
       return false;
@@ -62,10 +62,10 @@
     callback = opts.callback || callback;
     echo.render();
     if (document.addEventListener) {
-      root.addEventListener('scroll', debounceOrThrottle, false);
+      document.querySelector(opts.element).addEventListener('scroll', debounceOrThrottle, false);
       root.addEventListener('load', debounceOrThrottle, false);
     } else {
-      root.attachEvent('onscroll', debounceOrThrottle);
+      document.querySelector(opts.element).attachEvent('onscroll', debounceOrThrottle);
       root.attachEvent('onload', debounceOrThrottle);
     }
   };
