@@ -9,13 +9,32 @@ bower install echojs
 Using Echo.js is simple, to add an image directly into the page simply add a `data-echo` attribute to the img tag. Alternatively if you want to use Echo to lazy load background images simply add a `data-echo-background' attribute to the element with the image URL.
 
 ```html
+<head>
+  <style>
+    .echo-scrollbar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
 <body>
+
+  <div class="echo-scrollbar">
+      <ul class="echo-scrollbox">
+          <li><img src="images/blank.png" data-echo="images/logoditu.png"></li>
+      </ul>
+  </div>
 
   <img src="img/blank.gif" alt="Photo" data-echo="img/photo.jpg">
 
   <script src="dist/echo.js"></script>
   <script>
   echo.init({
+    element: '.echo-scrollbar',
     offset: 100,
     throttle: 250,
     unload: false,
