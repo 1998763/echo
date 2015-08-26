@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
     <meta name="format-detection" content="telephone=no, email=no">
     <title>echo.js</title>
     <link rel="stylesheet" href="css/normalize.css">
@@ -58,12 +58,12 @@
         </ul>
     </div>
 
-    <script src="../src/echo.js"></script>
+    <script src="../src/echo.js?v=3"></script>
     <script>
     echo.init({
         element: '.echo-scrollbar',
         offset: 100,
-        throttle: 250,
+        throttle: 50,
         unload: false,
         callback: function (element, op) {
           console.log(element, 'has been', op + 'ed')
