@@ -29,8 +29,6 @@ Using Echo.js is simple, to add an image directly into the page simply add a `da
       </ul>
   </div>
 
-  <img src="img/blank.gif" alt="Photo" data-echo="img/photo.jpg">
-
   <script src="dist/echo.js"></script>
   <script>
   echo.init({
